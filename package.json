@@ -1,0 +1,16 @@
+{
+  "name": "coin-instruments-etl-demo",
+  "version": "0.0.1",
+  "description": "Demo job for coin instruments data storage, load and minimal user access",
+  "main": "index.js",
+  "repository": "git@github.com:antpolyakov/coin-instruments-etl-demo.git",
+  "author": "Ant Polyakov <ant@polyakov.ru>",
+  "license": "UNLICENSED",
+  "private": false,
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
