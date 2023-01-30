@@ -12,8 +12,11 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
+    "bootstrap": "knex migrate:latest",
+    "start": "run-p start:server start:loader-job",
     "start:server": "nodemon server/server.js",
-    "start:loader-job": "nodemon loader/job.js"
+    "start:loader-job": "nodemon loader/job.js",
+    "clean": "rimraf *.sqlite3"
   },
   "dependencies": {
     "@fastify/jwt": "^6.5.0",
@@ -24,6 +27,7 @@
     "fastify": "^4.12.0",
     "knex": "^2.4.2",
     "node-fetch": "^2",
-    "objection": "^3.0.1"
+    "objection": "^3.0.1",
+    "yarn-run-all": "^3.1.1"
   }
 }
