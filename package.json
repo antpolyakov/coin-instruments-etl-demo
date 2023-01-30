@@ -2,7 +2,7 @@
   "name": "coin-instruments-etl-demo",
   "version": "0.0.1",
   "description": "Demo job for coin instruments data storage, load and minimal user access",
-  "main": "server.js",
+  "main": "server/server.js",
   "repository": "git@github.com:antpolyakov/coin-instruments-etl-demo.git",
   "author": "Ant Polyakov <anton.polyakov@moldstud.com>",
   "license": "UNLICENSED",
@@ -11,7 +11,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start:server": "nodemon server.js",
+    "start:server": "nodemon server/server.js",
     "start:loader-job": "nodemon loader/job.js"
   },
   "dependencies": {

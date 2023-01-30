@@ -1,6 +1,6 @@
-const config = require('./db-config');
+const config = require('../db-config');
 const knex = require('knex')(config);
-const {Model, snakeCaseMappers} = require('objection');
+const { Model, snakeCaseMappers } = require('objection');
 
 Model.knex(knex);
 
