@@ -4,16 +4,21 @@
   "description": "Demo job for coin instruments data storage, load and minimal user access",
   "main": "index.js",
   "repository": "git@github.com:antpolyakov/coin-instruments-etl-demo.git",
-  "author": "Ant Polyakov <ant@polyakov.ru>",
+  "author": "Ant Polyakov <anton.polyakov@moldstud.com>",
   "license": "UNLICENSED",
   "private": false,
   "devDependencies": {
     "nodemon": "^2.0.20"
   },
+  "scripts": {
+    "start:loader-job": "nodemon loader/job.js"
+  },
   "dependencies": {
     "better-sqlite3": "^8.0.1",
+    "cron": "^2.2.0",
     "dotenv": "^16.0.3",
     "knex": "^2.4.2",
+    "node-fetch": "^2",
     "objection": "^3.0.1"
   }
 }
