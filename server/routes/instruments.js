@@ -1,12 +1,16 @@
 const { Instrument } = require("../../models");
 
 module.exports = (fastify) => {
-    fastify.get('/instruments', async (request, reply) => {
+    fastify.get('/instruments', {
+        onRequest: [ fastify.validateJwtAccess ],
+    }, async (request, reply) => {
         const instruments = await Instrument.query();
         return reply.send(instruments);
     });
 
-    fastify.get('/instruments/:symbol', async (request, reply) => {
+    fastify.get('/instruments/:symbol', {
+        onRequest: [ fastify.validateJwtAccess ],
+    }, async (request, reply) => {
         const { symbol } = request.params;
         const instrument = symbol && await Instrument.query().findOne({'instrument_symbol': symbol.toLowerCase()});
 

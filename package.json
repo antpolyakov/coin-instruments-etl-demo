@@ -8,6 +8,7 @@
   "license": "UNLICENSED",
   "private": false,
   "devDependencies": {
+    "base-x": "^4.0.0",
     "nodemon": "^2.0.20"
   },
   "scripts": {
@@ -15,6 +16,8 @@
     "start:loader-job": "nodemon loader/job.js"
   },
   "dependencies": {
+    "@fastify/jwt": "^6.5.0",
+    "bcrypt": "^5.1.0",
     "better-sqlite3": "^8.0.1",
     "cron": "^2.2.0",
     "dotenv": "^16.0.3",

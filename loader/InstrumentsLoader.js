@@ -55,9 +55,6 @@ class InstrumentsLoader {
     async load() {
         const entries = await this.#fetchInstruments();
 
-        // TODO clean-up
-        // console.log(entries);
-
         this.#storeInstruments(entries);
     }
 }
